@@ -6,8 +6,8 @@ EAPI=6
 if [[ ${PV} == 9999 ]]; then
 	MATE_BRANCH=9999
 else
-	inherit versionator
-	MATE_BRANCH="$(get_version_component_range 1-2)"
+	inherit eapi7-ver
+	MATE_BRANCH="$(ver_cut 1-2)"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
